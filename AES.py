@@ -445,17 +445,17 @@ def dekripsi():
     ## proses N = 0
     ## Add Round key, dengan Round key ke N
     state = Add_Round_key(chiperText, roundKey[-1])
-    print('Add RK    ', N)
+    print('Add RK    ', 0)
     print_to_Hex(state)    
 
     ## Shift Row
     state = Inv_Shift_Row(state)
-    print('Shift Row ', N)
+    print('Shift Row ', 0)
     print_to_Hex(state)
 
     ## Sub Bytes
     state = Inv_Sub_Bytes(state)
-    print('Sub Bytes ', N)
+    print('Sub Bytes ', 0)
     print_to_Hex(state)
 
     ## Proses Dekripsi N = 1 hingga N-1
@@ -483,7 +483,7 @@ def dekripsi():
 
     ## Perhitungan Dekripsi ke N
     state = Add_Round_key(state, roundKey[0])
-    print('Add RK    ', 0)
+    print('Add RK    ', N)
     print_to_Hex(state)
 
     ## Show output
